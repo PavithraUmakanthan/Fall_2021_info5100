@@ -1,4 +1,4 @@
-package edu.northeastern.umkanthan.p;
+package e2;
 
 public class Main {
 

@@ -1,4 +1,4 @@
-package datatypes;
+package e1;
 
 public class Main {
 
