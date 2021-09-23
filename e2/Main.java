@@ -13,7 +13,7 @@ public class Main {
         }
     }
 
-    boolean anagram = arrAnagram("AABA", "BABA"){
+    /*boolean anagram = arrAnagram("AABA", "BABA"){
         if(anagram)
         {
             System.out.println("Yes");
@@ -21,7 +21,7 @@ public class Main {
         }else{
             System.out.println("No");
         }
-    }
+    }*/
 
     private static boolean isPalindrome(String str){
 
@@ -68,6 +68,7 @@ public class Main {
                 return false;
             }
         }
+        return true;
 
 
     }
