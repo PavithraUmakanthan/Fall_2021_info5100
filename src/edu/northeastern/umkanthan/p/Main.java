@@ -4,41 +4,73 @@ public class Main {
 
     public static void main(String[] args) {
 
+        boolean palindrome = isPalindrome("ABAABA");
+        if (palindrome){
+            System.out.println("Yes");
 
+        }else{
+            System.out.println("No");
+        }
+    }
 
-        int numOfStudentsInClass = 62;
+    boolean anagram = arrAnagram("AABA", "BABA"){
+        if(anagram)
+        {
+            System.out.println("Yes");
 
-        int max = Integer.MAX_VALUE;
-        int min = Integer.MIN_VALUE;
+        }else{
+            System.out.println("No");
+        }
+    }
 
-        short maxShort = Short.MAX_VALUE;
-        short minShort = Short.MIN_VALUE;
+    private static boolean isPalindrome(String str){
 
-        double maxDouble = Double.MAX_VALUE;
-        double minDouble = Double.MIN_VALUE;
-        Double myval = 5.23d;
+        if (str == null || str.length() <= 1){
 
-        char ch = 'A';
+            return true;
+        }
+        char[] arr = str.toCharArray();
+        int start =0;
+        int end = arr.length -1;
 
-        System.out.println("My" + ch);
+        while(start < end){
+            if(arr[start] != arr[end]){
 
-        boolean bTestVal = true;
-        System.out.println(bTestVal);
-        bTestVal =!bTestVal;
-        System.out.println(bTestVal);
+                return false;
 
-        long maxlong = Long.MAX_VALUE;
-        long minlong = Long.MIN_VALUE;
-        long myvalue = 5;
-
-        byte maxbyte = Byte.MAX_VALUE;
-        byte minbyte = Byte.MIN_VALUE;
-
-
-
-        System.out.println(maxbyte);
-        System.out.println(minbyte);
-        System.out.println(myvalue);
+            }
+            start ++;
+            end--;
+        }
+        return true;
 
     }
+
+    private static boolean arrAnagram( String str1, String str2) {
+
+        if (str1 == null || str2 == null || str1.isEmpty() || str2.isEmpty()) {
+            return true;
+
+        }
+        if (str1.length() != str2.length()) {
+            return true;
+        }
+        int[] arr = new int[120];
+
+        for (int i = 0; i < str1.length(); i++) {
+            arr[str1.charAt(i)]++;
+            arr[str2.charAt(i)]--;
+
+        }
+
+        for (int i = 0; i < 120; i++) {
+            if (arr[i] != 0) {
+                return false;
+            }
+        }
+
+
+    }
+
+
 }
